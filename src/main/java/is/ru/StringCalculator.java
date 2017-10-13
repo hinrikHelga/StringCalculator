@@ -1,8 +1,8 @@
-package is.ru.stringcalculator
+package is.ru.stringcalculator;
 
-public class Calculator {
+public class StringCalculator {
 
 	public static int add(String numbers) {
-
+		return 0;
 	}
 }

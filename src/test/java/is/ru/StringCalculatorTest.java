@@ -23,6 +23,6 @@ public class StringCalculatorTest {
 	}
 
 	public void testAllowNewLines() {
-		assertEquals(6, StringCalculator.add("1/n2,3"));
+		assertEquals(6, StringCalculator.add("1\n2,3"));
 	}
 }

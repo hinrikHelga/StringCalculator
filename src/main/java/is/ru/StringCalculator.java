@@ -20,8 +20,11 @@ public class StringCalculator {
 
 	private static int sum(String [] splitNumbers) {
 
-
-		int sumOfNum = makeInt(splitNumbers[0]) + makeInt(splitNumbers[1]);
+		int sumOfNum = 0;
+		for (int i = 0; i < splitNumbers.length; i++) {
+			sumOfNum += makeInt(splitNumbers[i]);
+		}
+		
 		return sumOfNum;
 	}
 

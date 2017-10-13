@@ -9,7 +9,7 @@ public class StringCalculator {
 		}
 
 		else if (numbers.contains(",")) {
-			String splitNumbers[] = numbers.split(",");
+			String splitNumbers[] = numbers.split(",|/n");
 			return sum(splitNumbers);
 		}
 		

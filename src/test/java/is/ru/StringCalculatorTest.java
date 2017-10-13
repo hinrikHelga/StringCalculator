@@ -18,7 +18,11 @@ public class StringCalculatorTest {
 		assertEquals(3, StringCalculator.add("1,2"));
 	}
 
-	public void testMultipleNnumbers() {
+	public void testMultipleNumbers() {
 		assertEquals(20, StringCalculator.add("1,2,3,4,10"));
+	}
+
+	public void testAllowNewLines() {
+		assertEquals(6, StringCalculator.add("1/n2,3"));
 	}
 }

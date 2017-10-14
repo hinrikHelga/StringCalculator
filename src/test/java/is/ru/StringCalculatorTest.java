@@ -25,4 +25,9 @@ public class StringCalculatorTest {
 	public void testAllowNewLines() {
 		assertEquals(6, StringCalculator.add("1\n2,3"));
 	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testNegativeNumbers() {
+		StringCalculator.add("1,2,-3,4,5");
+	}
 }

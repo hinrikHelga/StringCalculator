@@ -30,4 +30,8 @@ public class StringCalculatorTest {
 	public void testNegativeNumbers() {
 		StringCalculator.add("1,2,-3,4,5");
 	}
+
+	public void testNumbersBigNumbers() {
+		assertEquals(4, StringCalculator.add("1,1002,3"));
+	}
 }

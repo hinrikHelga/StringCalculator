@@ -33,6 +33,19 @@ public class StringCalculator {
 			if (makeInt(splitNumbers[i]) < 0) {
 				throw new IllegalArgumentException("Negatives not allowed " + storage);
 			}
+
+			if (makeInt(splitNumbers[i]) > 1000) {
+				int sumOfSmallNum = 0;
+				for (int j = 0; j < splitNumbers.length; j++) {
+					if (makeInt(splitNumbers[j]) > 1000) {
+						splitNumbers[j] = "0";
+					}
+					int parse = makeInt(splitNumbers[j]);
+					sumOfSmallNum += parse;
+				}
+
+				return sumOfSmallNum;
+			}
 			sumOfNum += makeInt(splitNumbers[i]);
 		}
 		

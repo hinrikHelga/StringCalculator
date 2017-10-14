@@ -34,4 +34,8 @@ public class StringCalculatorTest {
 	public void testNumbersBigNumbers() {
 		assertEquals(4, StringCalculator.add("1,1002,3"));
 	}
+
+	public void testDifferentDelimeter() {
+		assertEquals(5, StringCalculator.add("//#\n3#2"));
+	}
 }

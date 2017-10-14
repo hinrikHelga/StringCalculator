@@ -8,6 +8,13 @@ public class StringCalculator {
 			return 0;
 		}
 
+		else if (numbers.startsWith("//")) {
+			newDelimeter(numbers);
+			String onlyCommas = makeCommas(numbers);
+			String splitNumbers[] = onlyCommas.split(",");
+			return sum(splitNumbers);
+		}
+
 		else if (numbers.contains(",") || numbers.contains("\n")) {
 			String onlyCommas = makeCommas(numbers);
 			String splitNumbers[] = onlyCommas.split(",");
@@ -21,6 +28,7 @@ public class StringCalculator {
 
 	private static int sum(String [] splitNumbers) {
 
+		// Store negative numbers in a string.
 		String storage = "";
 		for (int i = 0; i < splitNumbers.length; i++) {
 			if (makeInt(splitNumbers[i]) < 0) {
@@ -28,6 +36,7 @@ public class StringCalculator {
 			}
 		}
 
+		// Return sum of numbers.
 		int sumOfNum = 0;
 		for (int i = 0; i < splitNumbers.length; i++) {
 			if (makeInt(splitNumbers[i]) < 0) {
@@ -59,5 +68,17 @@ public class StringCalculator {
 	private static String makeCommas(String newLines) {
 		newLines = newLines.replaceAll("\n", ",");
 		return newLines;
+	}
+
+	private static String newDelimeter(String numbers) {
+		int stringIndex = 2;
+		String delim = "";
+		while (numbers.charAt(stringIndex) != '\n') {
+			delim += numbers.charAt(stringIndex);
+			stringIndex++;
+		}
+
+		numbers = numbers.replaceAll("delim", ",");
+		return numbers;
 	}
 }
